@@ -1,0 +1,179 @@
+%% ============================================================
+%%  Aditya Kumar Gupta — ATS-Optimised Resume
+%%  Compile with: pdflatex Aditya_Kumar_Gupta_Resume.tex
+%% ============================================================
+\documentclass[10pt, letterpaper]{article}
+
+% ---------- Packages ----------
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[margin=0.55in, top=0.45in, bottom=0.45in]{geometry}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{parskip}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{microtype}
+
+% ---------- Colors ----------
+\definecolor{darkblue}{HTML}{2563eb}
+\definecolor{darktext}{HTML}{1a1a2e}
+\definecolor{graytext}{HTML}{4b5563}
+\definecolor{rulecolor}{HTML}{d1d5db}
+
+% ---------- Hyperref Setup ----------
+\hypersetup{
+  colorlinks=true,
+  urlcolor=darkblue,
+  linkcolor=darkblue,
+  pdftitle={Aditya Kumar Gupta — Resume},
+  pdfauthor={Aditya Kumar Gupta}
+}
+
+% ---------- Section Formatting ----------
+\titleformat{\section}
+  {\small\bfseries\color{darkblue}\uppercase\addfontfeature{LetterSpace=2}}
+  {}{0em}{}
+  [\vspace{-4pt}\color{rulecolor}\hrule\vspace{3pt}]
+
+\titlespacing*{\section}{0pt}{8pt}{4pt}
+
+% ---------- List Settings ----------
+\setlist[itemize]{
+  leftmargin=1.2em,
+  itemsep=1.5pt,
+  topsep=2pt,
+  parsep=0pt,
+  partopsep=0pt
+}
+
+% ---------- Helper Commands ----------
+\newcommand{\resumeRole}[3]{%
+  \vspace{4pt}%
+  \noindent{\textbf{\color{darktext}#1}}%
+  \hfill%
+  {\small\textit{\color{graytext}#3}}\\
+  {\small\color{graytext}#2}%
+  \vspace{1pt}%
+}
+
+\newcommand{\resumeProject}[2]{%
+  \vspace{4pt}%
+  \noindent{\textbf{\color{darktext}#1}}%
+  \hfill%
+  {\small\color{graytext}#2}%
+  \vspace{1pt}%
+}
+
+\pagestyle{empty}
+\color{darktext}
+
+% ============================================================
+\begin{document}
+% ============================================================
+
+% ─── HEADER ─────────────────────────────────────────────────
+\begin{center}
+  {\LARGE\bfseries Aditya Kumar Gupta}\\[4pt]
+  {\small
+    Noida, India \quad|\quad
+    +91 7417016484 \quad|\quad
+    \href{mailto:guptaadi625@gmail.com}{guptaadi625@gmail.com} \quad|\quad
+    \href{https://linkedin.com/in/guptaadi625}{LinkedIn} \quad|\quad
+    \href{https://guptaadi625.github.io}{Portfolio} \quad|\quad
+    \href{https://leetcode.com/u/neko_oni/}{LeetCode}
+  }
+\end{center}
+
+% ─── EXPERIENCE ──────────────────────────────────────────────
+\section{Experience}
+
+\resumeRole
+  {Co-Founder \& Lead Software Architect --- SaaS HRMS Platform}
+  {Stealth SaaS Venture | Noida, India}
+  {Jan 2026 -- Present}
+\begin{itemize}
+  \item Architected and delivered an enterprise-grade HRMS SaaS platform 10$\times$ the scale of prior systems, onboarding an enterprise client managing $\sim$300 employees within the first deployment cycle.
+  \item Designed multi-tenant microservices architecture with RESTful APIs, Role-Based Access Control (RBAC), and end-to-end encrypted data pipelines to ensure enterprise-level data isolation and compliance.
+  \item Engineered automated payroll, leave management, and biometric attendance modules, reducing client HR operational overhead by an estimated 70\% post-deployment.
+  \item Drove full product lifecycle---from system design and cloud infrastructure provisioning to client onboarding and post-sale support---as the sole technical co-founder.
+\end{itemize}
+
+\resumeRole
+  {Software Developer Intern}
+  {Saitec International | Noida, India}
+  {Sep 2025 -- Present}
+\begin{itemize}
+  \item \textbf{Secure Architecture \& Vulnerability Remediation:} Identified a critical architectural flaw exposing raw database credentials inside client-delivered binaries; decoupled all DB logic into a server-side RESTful API with token-based authentication, eliminating the attack surface and achieving zero credential-exposure incidents post-fix.
+  \item \textbf{CI/CD \& Infrastructure:} Engineered and managed end-to-end CI/CD pipelines on IIS Servers for multi-project deployments, sustaining 99.9\% uptime across internal and client-facing production environments.
+  \item \textbf{Automated Database Provisioning:} Built an automated database creation and configuration system that eliminated 100\% of manual client-onboarding effort; implemented version-checking and minimum-version enforcement across the entire software suite.
+  \item \textbf{HRMS \& Biometric Integration:} Refactored a failing HRMS codebase into a production-grade system live for Tiranga Group; extended it with a standalone hardware integration module connecting directly to ZKTeco biometric devices via SDK to automate real-time attendance entries.
+  \item \textbf{Automation \& Bulk Processing:} Reduced HR manual data entry by 80\% by engineering automated salary-crediting (PDF.js) and bulk employee-onboarding modules (ExcelJS) capable of processing hundreds of records per batch.
+  \item \textbf{Legacy Stabilization \& Licensing:} Stabilized legacy Windows Forms applications (POS, Production Management, Inventory Management) by resolving critical runtime bugs; engineered and deployed a universal licensing module securing all client-delivered applications.
+  \item \textbf{Security Audit --- Loan Management System:} Reverse-engineered a banking client's Loan Management System; identified and surgically removed critical security vulnerabilities and unauthorized data-tracking scripts, restoring full system integrity.
+  \item \textbf{Property Management System:} Stabilized a legacy Laravel-based Property Management System, increasing operational efficiency by 40\% through automated rent workflows and RBAC implementation.
+\end{itemize}
+
+% ─── PROJECTS ────────────────────────────────────────────────
+\section{Projects}
+
+\resumeProject
+  {Codecraft --- Distributed Online Code Execution Platform}
+  {C++, Python, Java, Docker, Containerization | May 2025}
+\begin{itemize}
+  \item Engineered a scalable, distributed code execution platform supporting multiple languages (C++, Python, Java) with a microservices-oriented design for isolated execution routing.
+  \item Implemented Docker-based containerization to sandbox runtime environments, preventing Remote Code Execution (RCE) vulnerabilities and achieving full workload isolation per submission.
+\end{itemize}
+
+\resumeProject
+  {Cloud-Synced Note Platform --- Notion-Style Collaborative App}
+  {ASP.NET Core, Google Drive API, SQL Server | Oct 2025}
+\begin{itemize}
+  \item Architected a secure, Notion-style rich-text application with conflict-free cloud synchronization via Google Drive API integration, ensuring user data sovereignty and privacy.
+  \item Optimized SQL Server indexing strategies for nested document structures, reducing query retrieval latency by 30\% under production load.
+\end{itemize}
+
+\resumeProject
+  {MindEase --- AI-Powered Mental Health Conversational Agent}
+  {React Native, Python, Flask, RESTful APIs | Jun 2025}
+\begin{itemize}
+  \item Developed a real-time mental health conversational agent using a Flask-based RESTful API backend and React Native frontend; optimized API response latency by 35\%, increasing user session retention.
+  \item Designed an accessibility-first UI following WCAG guidelines, broadening the platform's reach for users with diverse needs.
+\end{itemize}
+
+% ─── TECHNICAL SKILLS ─────────────────────────────────────────
+\section{Technical Skills}
+
+\begin{tabularx}{\textwidth}{@{} >{\bfseries}l X @{}}
+  Core Concepts  & Data Structures \& Algorithms, System Design, Distributed Systems, Microservices, OOP, DBMS, Operating Systems, Secure Architecture \\[2pt]
+  Languages      & C++, C\#, Python, JavaScript (ES6+), TypeScript, PHP, SQL \\[2pt]
+  Frontend       & React.js, React Native, Tailwind CSS, HTML5, CSS3, Vite \\[2pt]
+  Backend \& APIs & Node.js, ASP.NET Core, Laravel, Django, Flask, Entity Framework, RESTful API Design \\[2pt]
+  DevOps \& Infra & Docker, Containerization, CI/CD Pipelines, IIS Server, Git, Postman, SSMS \\[2pt]
+  Hardware \& Integration & ZKTeco Biometric SDK, PDF.js, ExcelJS, Google Drive API \\
+\end{tabularx}
+
+% ─── EDUCATION ────────────────────────────────────────────────
+\section{Education}
+
+\resumeRole
+  {Bachelor of Engineering in Computer Science \quad|\quad CGPA: 7.51 / 10}
+  {Chandigarh University, Punjab, India}
+  {Aug 2021 -- Jul 2025}
+
+% ─── ACHIEVEMENTS ─────────────────────────────────────────────
+\section{Achievements \& Certifications}
+
+\begin{itemize}
+  \item \textbf{LeetCode Knight (Rating: 2078 | Top 3\% Globally):} Solved 500+ problems across Dynamic Programming, Graphs, and System Design. \href{https://leetcode.com/u/neko_oni/}{leetcode.com/u/neko\_oni}
+  \item \textbf{HackerRank 5-Star Gold Badge:} Awarded in C and C++ Programming for consistent high-performance solutions.
+  \item \textbf{Certifications:} Web Development, Python for Data Science, Discrete Mathematics.
+\end{itemize}
+
+\end{document}
+%% ============================================================
+%%  END OF DOCUMENT
+%% ============================================================

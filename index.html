@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+    
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Aditya Kumar Gupta — Software Engineer</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+
+
+
+    <script>
+    window.TWEAK_DEFAULTS = {
+        "accent": "#FFA94D",
+        "background": "deep",
+        "cursor": true,
+        "grain": true,
+        "marqueeSpeed": 60
+    };
+    </script>
+</head>
+<body>
+    
+
+  <!-- Loader -->
+  <div class="loader" id="loader">
+    <div class="count mono" id="loaderCount">00</div>
+    <div class="bar"><div id="loaderBar"></div></div>
+  </div>
+
+  <!-- Custom cursor -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- Texture & vignette -->
+  <div class="grain"></div>
+  <div class="vignette"></div>
+
+  <!-- Progress bar -->
+  <div class="progress"><div id="progressBar"></div></div>
+
+  <!-- Nav -->
+  <nav class="top">
+    <a href="#top" class="brand" data-hover>Aditya / AKG©</a>
+    <div class="links">
+      <a href="#work" data-hover>Work</a>
+      <a href="#about" data-hover>About</a>
+      <a href="#stack" data-hover>Stack</a>
+      <a href="#contact" data-hover>Contact</a>
+    </div>
+  </nav>
+
+  <!-- Side rails -->
+  <div class="rail left">guptaadi625@gmail.com</div>
+  <div class="rail right" id="sectionRail">
+    <span class="dot" data-target="hero"></span>
+    <span class="dot" data-target="about"></span>
+    <span class="dot" data-target="stack"></span>
+    <span class="dot" data-target="work"></span>
+    <span class="dot" data-target="exp"></span>
+    <span class="dot" data-target="stats"></span>
+    <span class="dot" data-target="contact"></span>
+  </div>
+
+  <!-- Smooth scroll root -->
+  <div id="scroll-root">
+    <div id="app"></div>
+  </div>
+
+
+    <div id="cmdk-root"></div>
+    <div id="tweaks-root"></div>
+    <div id="fx-root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+</body>
+</html>
